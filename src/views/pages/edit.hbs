@@ -1,0 +1,64 @@
+<h1 class="text-center my-4">Editar Contacto</h1>
+<form action="/edit/{{contact._id}}" method="post" class="w-25 mx-auto">
+	<div class="mb-3">
+		<label for="nombres">Nombres</label>
+		<input
+			type="text"
+			name="nombres"
+			class="form-control"
+			value="{{contact.nombres}}"
+			required
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="ap_paterno">Apellido Paterno</label>
+		<input
+			type="text"
+			name="ap_paterno"
+			class="form-control"
+			value="{{contact.ap_paterno}}"
+			required
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="ap_materno">Apellido Materno</label>
+		<input
+			type="text"
+			name="ap_materno"
+			class="form-control"
+			value="{{contact.ap_materno}}"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="t_fijo">Teléfono Fijo</label>
+		<input
+			type="text"
+			name="t_fijo"
+			class="form-control"
+			value="{{contact.t_fijo}}"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="t_movil">Teléfono Móvil</label>
+		<input
+			type="text"
+			name="t_movil"
+			class="form-control"
+			value="{{contact.t_movil}}"
+		/>
+	</div>
+	<div class="mb-3">
+		<label for="email">Email</label>
+		<input
+			type="text"
+			name="email"
+			class="form-control"
+			value="{{contact.email}}"
+		/>
+	</div>
+	<input
+		type="submit"
+		value="Editar Contacto"
+		class="btn btn-primary btn-block"
+	/>
+</form>

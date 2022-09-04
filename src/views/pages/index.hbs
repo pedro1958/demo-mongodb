@@ -1,0 +1,39 @@
+<h1 class="text-center my-4">Agenda de Contactos</h1>
+<a href="/add" class="btn btn-primary">
+	<i class="fa-solid fa-plus"></i>
+	Agregar Nuevo
+</a>
+{{#if contacts}}
+	<table class="table table-striped mt-4">
+		<thead class="bg-black text-white">
+			<tr>
+				<th>Nombres</th>
+				<th>Apellido Paterno</th>
+				<th>Apellido Materno</th>
+				<th>Teléfono Fijo</th>
+				<th>Teléfono Móvil</th>
+				<th>Email</th>
+				<th>Operaciones</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each contacts}}
+				<tr>
+					<td>{{nombres}}</td>
+					<td>{{ap_paterno}}</td>
+					<td>{{ap_materno}}</td>
+					<td>{{t_fijo}}</td>
+					<td>{{t_movil}}</td>
+					<td>{{email}}</td>
+					<td>
+						<a href="/edit/{{_id}}" class="btn btn-warning">Editar</a>
+						|
+						<a href="/delete/{{_id}}" class="btn btn-danger">Eliminar</a>
+					</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
+{{else}}
+	<h3 class="text-center">No hay contactos en la agenda</h3>
+{{/if}}
